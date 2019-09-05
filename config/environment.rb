@@ -1,5 +1,6 @@
 require 'bundler/setup'
 Bundler.require
+require 'pry'
 
 Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| require f}
 Dir[File.join(File.dirname(__FILE__), "../lib/support", "*.rb")].each {|f| require f}
@@ -18,3 +19,6 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
+
+# binding.pry
+# 'save'
